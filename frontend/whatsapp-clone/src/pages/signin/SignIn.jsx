@@ -1,21 +1,39 @@
-import React from "react";
+import React, { useRef } from "react";
 import styles from "./Signin.module.css";
-import { useNavigate } from "react-router-dom";
-function SignIn() {
+import useLoginMutation from "../../hooks/mutators/useLoginMutation";
 
-  const navigate =useNavigate()
-  function handleNavigate(){
-    navigate('/chat')
+function SignIn() {
+  const emailRef = useRef(null);
+  const passwordRef = useRef(null);
+  const { login, loading } = useLoginMutation();
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    const email = emailRef.current.value;
+    const password = passwordRef.current.value;
+
+    login(email, password);
   }
 
   return (
     <div className={styles.main}>
       <div className={styles.container}>
-        <h1>SignIn </h1>
-
-        <input type="text" placeholder="Enter Your Email" />
-        <input type="password" placeholder="Enter Your Password" />
-        <button onClick={handleNavigate}>Login</button>
+        <h1>Sign In</h1>
+        <form className={styles.form} onSubmit={handleSubmit}>
+          <input
+            type="email"
+            ref={emailRef}
+            placeholder="Enter Your Email"
+            required
+          />
+          <input
+            required
+            type="password"
+            ref={passwordRef}
+            placeholder="Enter Your Password"
+          />
+          <button disabled={loading}>Login</button>
+        </form>
       </div>
     </div>
   );

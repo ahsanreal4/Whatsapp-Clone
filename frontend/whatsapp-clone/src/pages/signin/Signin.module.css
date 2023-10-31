@@ -23,17 +23,21 @@
   color: gray;
 }
 
-.container > input {
+.form {
+  text-align: center;
+}
+
+.form > input {
   padding: 20px 100px;
   margin-bottom: 10px;
   color: black;
   border-radius: 10px;
   border: none;
 }
-.container > input:active {
+.form > input:active {
   border: 1px solid blue;
 }
-.container > button {
+.form > button {
   padding: 10px 145px;
   background-color: var(--button-bg);
   border: none;
@@ -42,7 +46,7 @@
   cursor: pointer;
   margin-top: 10px;
 }
-.container > button:hover {
+.form > button:hover {
   background-color: #2980b9;
 }
 @media (max-width: 850px) {
@@ -50,12 +54,12 @@
     width: 90%;
   }
 
-  .container > input {
+  .form > input {
     padding: 20px 50px;
     width: 100%;
   }
 
-   .container > button {
+  .form > button {
     padding: 20px 50px;
     width: 100%;
   }

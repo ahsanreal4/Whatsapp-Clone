@@ -6,5 +6,9 @@
 
 :root {
   --welcome-bg: #f0f8ff;
-  --button-bg : #3498db
+  --button-bg: #3498db;
+}
+
+button:disabled {
+  background-color: gray !important;
 }
