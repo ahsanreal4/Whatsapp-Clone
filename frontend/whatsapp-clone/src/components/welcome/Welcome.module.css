@@ -1,54 +1,54 @@
-/* Welcome.css */
-body{
-    background-color: #f0f8ff;
+.main {
+  background-color: var(--welcome-bg);
+  width: 100vw;
+  height: 100vh;
 }
 
 .welcome_title {
-    text-align: center;
-    animation: fadeInUp 1s;
-    margin-top: 20rem;
+  text-align: center;
+  animation: fadeInUp 1s;
+  padding-top: 20rem;
 }
-  
-  .button_container {
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    margin-top: 20px;
-   
+
+.button_container {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.nav_link {
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.button_style {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #3498db;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.button_style:hover {
+  background-color: #2980b9;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  .nav_link {
-    text-decoration: none;
-    margin: 0 10px;
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .button_style {
-    padding: 8px 16px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    background-color: #3498db;
-    color: white;
-    transition: background-color 0.3s;
-  }
-  
-  .button_style:hover {
-    background-color: #2980b9;
-  }
-  
-  @keyframes fadeInUp {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  footer {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 14px;
-    color: #777;
-  }
+}
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #777;
+}
