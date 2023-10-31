@@ -18,22 +18,22 @@
   margin-top: 100px;
   border-radius: 10px;
 }
-h1 {
+.container > h1 {
   margin-bottom: 20px;
   color: gray;
 }
 
-input {
+.container > input {
   padding: 20px 100px;
   margin-bottom: 10px;
   color: black;
   border-radius: 10px;
   border: none;
 }
-input:active {
+.container > input:active {
   border: 1px solid blue;
 }
-button {
+.container > button {
   padding: 10px 145px;
   background-color: var(--button-bg);
   border: none;
@@ -42,7 +42,7 @@ button {
   cursor: pointer;
   margin-top: 10px;
 }
-button:hover {
+.container > button:hover {
   background-color: #2980b9;
 }
 @media (max-width: 850px) {
@@ -50,12 +50,12 @@ button:hover {
     width: 90%;
   }
 
-  input {
+  .container > input {
     padding: 20px 50px;
     width: 100%;
   }
 
-  button {
+   .container > button {
     padding: 20px 50px;
     width: 100%;
   }

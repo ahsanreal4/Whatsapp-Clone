@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main_container{
+    display: flex;
+}
+.user_container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 300px;
+    height: 100vh;
+}
+.user_container > img{
+    border-radius: 50%;
+}
+.user_container > p {
+    text-align: center;
+}
+.sent_messages_container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-image: url(https://i.pinimg.com/564x/8c/98/99/8c98994518b575bfd8c949e91d20548b.jpg);
+  }
+  .sent_messages_container > button {
+    margin-top: 52.5%;
+    margin-left: 92%;
+    padding: 10px 30px;
+    position: absolute;
+    background-color:var(--button-bg) ;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+  }
+  .sent_messages_container > input {
+    width: 92%;
+    margin-top: 52.5%;
+    padding: 10px;
+
+  }
+  
