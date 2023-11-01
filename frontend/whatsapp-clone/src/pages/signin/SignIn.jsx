@@ -36,8 +36,9 @@ function SignIn() {
           />
           <button disabled={loading}>Login</button>
         </form>
-        <Link to={PAGES.SIGN_UP}>Register</Link>
-
+        <p className={styles.sign_up}>
+          Don't have an account? <Link to={PAGES.SIGN_UP}>Register</Link>
+        </p>
       </div>
     </div>
   );

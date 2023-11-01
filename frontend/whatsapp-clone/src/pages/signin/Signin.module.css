@@ -9,7 +9,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  background-color: ghostwhite;
+  background-color: var(--form-bg);
   justify-content: center;
   align-items: center;
   width: 500px;
@@ -42,18 +42,23 @@
   background-color: var(--button-bg);
   border: none;
   border-radius: 10px;
-  color: white;
+  color: var(--button-txt);
   cursor: pointer;
   margin-top: 10px;
 }
 .form > button:hover {
-  background-color: #2980b9;
+  background-color: var(--button-hvr);
 }
-.container > a{
+.container > a {
   color: var(--button-bg);
   margin-top: 5px;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
+
+.sign_up {
+  margin-top: 5px;
+}
+
 @media (max-width: 850px) {
   .container {
     width: 90%;

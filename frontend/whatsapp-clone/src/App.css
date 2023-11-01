@@ -5,8 +5,18 @@
 }
 
 :root {
+  /*
+   Backgrounds
+  */
   --welcome-bg: #f0f8ff;
+  --form-bg: ghostwhite;
+
+  /*
+   Button
+  */
   --button-bg: #3498db;
+  --button-txt: white;
+  --button-hvr: #2980b9;
 }
 
 button:disabled {
