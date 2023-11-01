@@ -1,86 +1,89 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .main_container {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 
+.users_container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 300px;
+  height: 100vh;
+  padding: 20px 20px;
+}
 
 .user_container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 300px;
-    height: 100vh;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .user_container > img {
-    border-radius: 50%;
-    width: 50px; 
-    height: 50px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
 }
 
 .user_container > p {
-    text-align: center;
-    margin: 0; 
+  text-align: center;
+  margin: 0;
 }
 .sent_messages_container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 100%; 
-    height: 100vh;
-    background-image: url(https://i.pinimg.com/564x/8c/98/99/8c98994518b575bfd8c949e91d20548b.jpg);
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  height: 100vh;
+  background-image: url(https://i.pinimg.com/564x/8c/98/99/8c98994518b575bfd8c949e91d20548b.jpg);
+  padding: 20px;
 }
 
-.input_messages_container{
-    display: flex;
-    gap: 5px;
-
+.input_messages_container {
+  display: flex;
+  gap: 5px;
 }
-.input_messages_container > input{
-    width: 100%;
-    height: 20px;
-    margin-top: 41%;
-    padding: 20px;
-
+.input_messages_container > input {
+  width: 100%;
+  height: 20px;
+  margin-top: 41%;
+  padding: 20px;
 }
 .input_messages_container > button {
-    margin-top: 41%;
-    width: 50px;
-    height: 40px;
-    padding: 10px;
-    background-color:var(--button-bg) ;
-    border: none;
-    border-radius: 10px;
-    font-size: 1rem;
+  margin-top: 41%;
+  width: 50px;
+  height: 40px;
+  padding: 10px;
+  background-color: var(--button-bg);
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
 }
 
 .user_chat_container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px; /* Space between messages */
-    padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Space between messages */
+  padding: 10px;
 }
 
 .first_color {
-    align-self: flex-start; 
-    text-align: right; 
-    background:var( --1st-user-color); 
-    padding: 10px;
-    border-radius: 10px;
+  align-self: flex-start;
+  text-align: right;
+  background: var(--1st-user-color);
+  padding: 10px;
+  border-radius: 10px;
 }
 
-
 .second_user {
-    align-self: flex-end; 
-    text-align: right; 
-    background: var( --2nd-user-color); 
-    padding: 10px;
-    border-radius: 10px;
+  align-self: flex-end;
+  text-align: right;
+  background: var(--2nd-user-color);
+  padding: 10px;
+  border-radius: 10px;
 }
