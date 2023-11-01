@@ -15,7 +15,7 @@ function Chat() {
       </div>
       <div className={styles.sent_messages_container}>
         <div className={styles.user_chat_container}>
-          <h3>ahsan</h3>
+          <h3 className={styles.first_color }>ahsan</h3>
           <h3 className={styles.second_user}>fazan</h3>
         </div>
         <div className={styles.input_messages_container}>

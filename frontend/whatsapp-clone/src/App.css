@@ -17,8 +17,14 @@
   --button-bg: #3498db;
   --button-txt: white;
   --button-hvr: #2980b9;
+
+
+  /*  users colors */
+  --1st-user-color:white;
+  --2nd-user-color :#DCF8C6
 }
 
 button:disabled {
   background-color: gray !important;
 }
+
