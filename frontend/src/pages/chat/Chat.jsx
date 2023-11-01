@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "./Chat.module.css";
 import useGetChats from "../../hooks/queries/useGetChats";
-
+import useLogout from "../../hooks/useLogout";
 function Chat() {
-  const { chats, loading } = useGetChats();
-
+  const { chats } = useGetChats();
+  const {logout} =useLogout()
   return (
     <>
       <div className={styles.main_container}>
@@ -20,6 +20,9 @@ function Chat() {
               <p>{chat.participants[0].name}</p>
             </div>
           ))}
+          
+          <button className={styles.logout_button} onClick={logout}>Logout</button>
+
         </div>
         <div className={styles.sent_messages_container}>
           <div className={styles.user_chat_container}>
