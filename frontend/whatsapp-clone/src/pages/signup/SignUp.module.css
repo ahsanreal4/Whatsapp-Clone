@@ -50,9 +50,10 @@ form {
 .form > button:hover {
   background-color: #2980b9;
 }
-.form > a {
+.inner_container > a {
   color: var(--button-bg);
-  margin-left: 10px;
+  margin-top: 10px;
+  font-size: 1.5rem;
 }
 @media (max-width: 850px) {
   .container {

@@ -45,8 +45,9 @@ function SignUp() {
             placeholder="Enter Your Password"
           />
           <button disabled={loading}>Submit</button>
-          <Link to={PAGES.SIGN_IN} className={styles.form}>Already Register Sign In </Link>
         </form>
+        <Link to={PAGES.SIGN_IN} className={styles.form}>Already Register Sign In </Link>
+
       </div>
     </div>
   );
