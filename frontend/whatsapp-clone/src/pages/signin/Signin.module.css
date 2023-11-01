@@ -49,6 +49,11 @@
 .form > button:hover {
   background-color: #2980b9;
 }
+.container > a{
+  color: var(--button-bg);
+  margin-top: 5px;
+  font-size: 1.5rem;
+}
 @media (max-width: 850px) {
   .container {
     width: 90%;

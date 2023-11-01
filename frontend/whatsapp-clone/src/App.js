@@ -1,7 +1,7 @@
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Welcome from "./pages/welcome/Welcome";
-import SignUp from "./pages/SignUp/SignUp.jsx";
+import SignUp from "./pages/signup/SignUp.jsx";
 import SignIn from "./pages/signin/SignIn";
 import Chat from "./pages/chat/Chat";
 import { PAGES } from "./data/pages";

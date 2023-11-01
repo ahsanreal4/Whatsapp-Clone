@@ -28,7 +28,7 @@
     height: 100vh;
     position: relative;
     background-image: url(https://i.pinimg.com/564x/8c/98/99/8c98994518b575bfd8c949e91d20548b.jpg);
-  }
+}
   .sent_messages_container > button {
     margin-top: 52.5%;
     margin-left: 92%;

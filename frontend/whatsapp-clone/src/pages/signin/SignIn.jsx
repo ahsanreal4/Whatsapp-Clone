@@ -1,6 +1,8 @@
 import React, { useRef } from "react";
 import styles from "./Signin.module.css";
 import useLoginMutation from "../../hooks/mutators/useLoginMutation";
+import { Link } from "react-router-dom";
+import { PAGES } from "../../data/pages";
 
 function SignIn() {
   const emailRef = useRef(null);
@@ -34,6 +36,8 @@ function SignIn() {
           />
           <button disabled={loading}>Login</button>
         </form>
+        <Link to={PAGES.SIGN_UP}>Register</Link>
+
       </div>
     </div>
   );

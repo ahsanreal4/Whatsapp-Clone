@@ -24,17 +24,21 @@
   color: gray;
 }
 
-.inner_container > input {
-  padding: 10px 100px;
+form {
+  text-align: center;
+}
+
+.form > input {
+  padding: 20px 100px;
   margin-bottom: 10px;
   color: black;
   border-radius: 10px;
   border: none;
 }
-.inner_container > input:active {
+.form > input:active {
   border: 1px solid blue;
 }
-.inner_container > button {
+.form > button {
   padding: 10px 145px;
   background-color: var(--button-bg);
   border: none;
@@ -43,20 +47,24 @@
   cursor: pointer;
   margin-top: 10px;
 }
-.inner_container > button:hover {
+.form > button:hover {
   background-color: #2980b9;
+}
+.form > a {
+  color: var(--button-bg);
+  margin-left: 10px;
 }
 @media (max-width: 850px) {
   .container {
     width: 90%;
   }
 
-  .inner_container > input {
+  .form > input {
     padding: 20px 50px;
     width: 100%;
   }
 
-  .inner_container >  button {
+  .form > button {
     padding: 20px 50px;
     width: 100%;
   }

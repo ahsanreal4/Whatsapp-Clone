@@ -20,7 +20,7 @@ function useLoginMutation() {
 
     try {
       const response = await axios.post(`${API_URL}/noAuth/login`, payload);
-      if (response.data?.success == true) {
+      if (response.data?.success ===true) {
         storeToken(response.data.token);
         navigate(PAGES.CHAT);
         toast.success("Signed in successfully");
