@@ -13,7 +13,6 @@ const authenticateJWT = (req, res, next) => {
   if (token) {
     jwt.verify(token, jwtSecret, (err, user) => {
       if (err) return next(res.status(403).send("Invalid JWT token"));
-      if (err) return next();
       req.user = user;
       next();
     });
