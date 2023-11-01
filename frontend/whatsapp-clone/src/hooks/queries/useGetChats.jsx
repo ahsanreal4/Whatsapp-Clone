@@ -15,7 +15,7 @@ function useGetChats() {
       const response = await axios.get(`${API_URL}/api/chat/get`, {
         headers: { Authorization: getAuthToken() },
       });
-      if (response.data?.success == true) {
+      if (response.data?.success ===true) {
         setChats(response.data.data);
       } else {
         toast.error("Some internal error occurred");
