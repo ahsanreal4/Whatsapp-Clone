@@ -21,7 +21,10 @@
 
   /*  users colors */
   --1st-user-color:white;
-  --2nd-user-color :#DCF8C6
+  --2nd-user-color :#DCF8C6;
+
+  /* user container color  */
+  --user-container-bg : lightgray;
 }
 
 button:disabled {
