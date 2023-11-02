@@ -1,24 +1,37 @@
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Welcome from "./pages/welcome/Welcome";
-import SignUp from "./pages/signup/SignUp.jsx";
-import SignIn from "./pages/signin/SignIn";
-import Chat from "./pages/chat/Chat";
-import { PAGES } from "./data/pages";
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useContext } from "react";
+import GlobalContext from "./context/globalContext/globalContext.jsx";
+import { PROTECTED_ROUTES } from "./routes/protectedRoutes.jsx";
+import { UN_PROTECTED_ROUTES } from "./routes/unProtectedRoutes.jsx";
 
 function App() {
+  const { user } = useContext(GlobalContext);
+
   return (
     <>
       <ToastContainer />
       <BrowserRouter>
         <Routes>
-          <Route path={PAGES.WELCOME} element={<Welcome />} />
-          <Route path={PAGES.SIGN_UP} element={<SignUp />} />
-          <Route path={PAGES.SIGN_IN} element={<SignIn />} />
-          <Route path={PAGES.CHAT} element={<Chat />} />
+          {!user &&
+            UN_PROTECTED_ROUTES.map((route, index) => (
+              <Route
+                key={`unprotected-route-${index}`}
+                element={route.element}
+                path={route.path}
+              />
+            ))}
+          {user &&
+            PROTECTED_ROUTES.map((route, index) => (
+              <Route
+                element={route.element}
+                path={route.path}
+                key={`protected-route-${index}`}
+              />
+            ))}
         </Routes>
       </BrowserRouter>
     </>
