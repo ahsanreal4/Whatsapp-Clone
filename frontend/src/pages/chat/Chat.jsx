@@ -26,7 +26,12 @@ function Chat() {
                     width={50}
                   />
                   <p>{chat.participants[0].name}</p>
+                 
+                  
+                 
                 </div>
+                
+                
               ))
             )}
           </div>
