@@ -1,5 +1,6 @@
 const User = require("../database/models/user");
 const Chat = require("../database/models/chat");
+const Message = require("../database/models/message");
 
 const getChats = async (userDetails) => {
   const user = await User.findOne({ email: userDetails.email });
@@ -30,4 +31,21 @@ const createChat = async (participants) => {
   await chat.save();
 };
 
-module.exports = { getChats, createChat };
+const createMessage = async (messageText, chatId, senderId) => {
+  const chat = await Chat.findById(chatId);
+
+  if (!chat) throw new Error("Chat not found");
+
+  const message = new Message({
+    message: messageText,
+    sender: senderId,
+  });
+
+  await message.save();
+
+  chat.messages.push(message);
+
+  await chat.save();
+};
+
+module.exports = { getChats, createChat, createMessage };
