@@ -19,4 +19,9 @@ router.post(
   asyncJsonController((req) => chat.createMessage(req))
 );
 
+router.get(
+  "/get-messages/:id",
+  asyncJsonController((req) => chat.getChatMessages(req))
+);
+
 module.exports = router;

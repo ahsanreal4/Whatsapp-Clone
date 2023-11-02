@@ -10,6 +10,20 @@ const getChats = async (req) => {
   }
 };
 
+const getChatMessages = async (req) => {
+  try {
+    const { id } = req.params;
+
+    if (!id) return { success: false, message: "Chat id not provided" };
+
+    const messages = await chatService.getChatMessages(id);
+    return { success: true, data: [...messages] };
+  } catch (err) {
+    console.error(err.message);
+    return { success: false };
+  }
+};
+
 const createChat = async (req) => {
   try {
     const { participants } = req.body;
@@ -41,4 +55,4 @@ const createMessage = async (req) => {
   }
 };
 
-module.exports = { getChats, createChat, createMessage };
+module.exports = { getChats, createChat, createMessage, getChatMessages };

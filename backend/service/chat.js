@@ -48,4 +48,19 @@ const createMessage = async (messageText, chatId, senderId) => {
   await chat.save();
 };
 
-module.exports = { getChats, createChat, createMessage };
+const getChatMessages = async (chatId) => {
+  const chat = await Chat.findById(chatId).populate({
+    path: "messages",
+    select: "message createdAt",
+    populate: {
+      path: "sender",
+      select: "name",
+    },
+  });
+
+  if (!chat) throw new Error("Chat not found");
+
+  return chat.messages;
+};
+
+module.exports = { getChats, createChat, createMessage, getChatMessages };
