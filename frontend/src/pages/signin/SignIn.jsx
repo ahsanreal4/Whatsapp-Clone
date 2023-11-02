@@ -27,12 +27,14 @@ function SignIn() {
             ref={emailRef}
             placeholder="Enter Your Email"
             required
+            autoComplete
           />
           <input
             required
             type="password"
             ref={passwordRef}
             placeholder="Enter Your Password"
+            autoComplete
           />
           <button disabled={loading}>Login</button>
         </form>

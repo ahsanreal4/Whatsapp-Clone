@@ -2,34 +2,45 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;}
+  font-family: "Roboto", sans-serif;
+}
 
 .main_container {
   display: flex;
+  width: 100vw;
+}
+
+.users_main_container {
+  width: 40%;
 }
 
 .users_container {
   display: flex;
   flex-direction: column;
-  width: 300px;
-  padding: 20px;
+  width: 100%;
+  padding: 20px 0px 20px 20px;
   border: 2px solid lightgray;
   border-radius: 5px;
-  max-height: 100vh;
-  overflow-y: auto;
-  scrollbar-width: thin ;
-}
-.users_container::-webkit-scrollbar {
-  margin-top: 30%;
-  width: 5px;
+  height: 100vh;
 }
 
-.users_container::-webkit-scrollbar-thumb {
+.user_items_container {
+  overflow-y: auto;
+  padding: 0px 10px 0px 0px;
+  margin-top: 20px;
+}
+
+.user_items_container::-webkit-scrollbar {
+  width: 5px;
+  scrollbar-width: thin;
+}
+
+.user_items_container::-webkit-scrollbar-thumb {
   background-color: var(--button-bg);
   border-radius: 10px;
 }
 
-.users_container::-webkit-scrollbar-track {
+.user_items_container::-webkit-scrollbar-track {
   background: transparent;
 }
 
@@ -43,6 +54,14 @@
   padding: 10px;
 }
 
+.user_container:first-child {
+  margin-top: 0px;
+}
+
+.user_container:hover {
+  cursor: pointer;
+}
+
 .user_container > img {
   border-radius: 50%;
   width: 50px;
@@ -54,7 +73,7 @@
   padding: 10px 20px;
 }
 
-.logout_button{
+.logout_button {
   position: absolute;
   margin-left: 15%;
   background-color: var(--button-bg);
@@ -74,7 +93,6 @@
   height: 100vh;
   background-image: url(https://i.pinimg.com/564x/8c/98/99/8c98994518b575bfd8c949e91d20548b.jpg);
   padding: 20px;
-
 }
 
 .input_messages_container {
@@ -101,7 +119,7 @@
 .user_chat_container {
   display: flex;
   flex-direction: column;
-  gap: 10px; 
+  gap: 10px;
   padding: 10px;
 }
 
