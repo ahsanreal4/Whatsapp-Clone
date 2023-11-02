@@ -1,15 +1,15 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 import { API_URL } from "../../data/api";
 import { storeToken } from "../../utils/auth";
 import { useNavigate } from "react-router-dom";
 import { PAGES } from "../../data/pages";
 import { toast } from "react-toastify";
-import GlobalContext from "../../context/globalContext/globalContext";
+import { useGlobalContext } from "../../context/globalContext/globalContext";
 
 function useLoginMutation() {
   const [loading, setLoading] = useState(false);
-  const { setUser } = useContext(GlobalContext);
+  const { setUser } = useGlobalContext();
   const navigate = useNavigate();
 
   const login = async (email, password) => {

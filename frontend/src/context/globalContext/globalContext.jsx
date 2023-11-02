@@ -1,4 +1,4 @@
-const { createContext, useState } = require("react");
+import { createContext, useContext, useState } from "react";
 
 const GlobalContext = createContext();
 
@@ -12,4 +12,4 @@ export const GlobalProvider = ({ children }) => {
   );
 };
 
-export default GlobalContext;
+export const useGlobalContext = () => useContext(GlobalContext);

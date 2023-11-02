@@ -4,7 +4,7 @@ import useGetChats from "../../hooks/queries/useGetChats";
 import useLogout from "../../hooks/useLogout";
 function Chat() {
   const { chats } = useGetChats();
-  const {logout} =useLogout()
+  const { logout } = useLogout();
   return (
     <>
       <div className={styles.main_container}>
@@ -21,13 +21,13 @@ function Chat() {
             </div>
           ))}
         </div>
-            <button className={styles.logout_button} onClick={logout}><i class="fa-solid fa-right-from-bracket"></i></button>
+        <button className={styles.logout_button} onClick={logout}>
+          <i className="fa-solid fa-right-from-bracket"></i>
+        </button>
         <div className={styles.sent_messages_container}>
           <div className={styles.user_chat_container}>
             <h3 className={styles.first_color}>ahsan</h3>
             <h3 className={styles.second_user}>faizan</h3>
-         
-            
           </div>
           <div className={styles.input_messages_container}>
             <input type="text" />
