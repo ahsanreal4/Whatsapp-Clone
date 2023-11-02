@@ -16,7 +16,10 @@ const login = async ({ email, password }) => {
     { expiresIn: 60 * 60 * 24 }
   );
 
-  return token;
+  const userDoc = user._doc;
+  delete userDoc.password;
+
+  return { token, user: userDoc };
 };
 
 const signUp = async ({ email, password, name }) => {

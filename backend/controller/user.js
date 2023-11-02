@@ -7,8 +7,8 @@ const login = async (data) => {
   if (!password) return { success: false, message: "Password not provided" };
 
   try {
-    const token = await userService.login(data);
-    return { success: true, token };
+    const { token, user } = await userService.login(data);
+    return { success: true, token, user };
   } catch (err) {
     console.error(err.message);
     return { success: false };
