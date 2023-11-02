@@ -1,13 +1,18 @@
-import React from "react";
 import styles from "./Chat.module.css";
 import useGetChats from "../../hooks/queries/useGetChats";
 import useLogout from "../../hooks/useLogout";
+
 function Chat() {
   const { chats } = useGetChats();
   const { logout } = useLogout();
 
+
+
+
   const ChatItem = ({ chat }) => (
-    <div className={styles.user_container}>
+    <div
+      className={styles.user_container}
+    >
       <img
         src="https://footwearnews.com/wp-content/uploads/2022/12/Cha-Eun-Woo-2.jpg"
         alt="pic"
@@ -29,9 +34,7 @@ function Chat() {
                 <p>No Chats</p>
               ) : (
                 chats.map((chat, index) => (
-                  <>
-                    <ChatItem key={`chat-item-${index}`} chat={chat} />
-                  </>
+                  <ChatItem key={`chat-item-${index}`} chat={chat} />
                 ))
               )}
             </div>
@@ -40,17 +43,19 @@ function Chat() {
         <button className={styles.logout_button} onClick={logout}>
           <i className="fa-solid fa-right-from-bracket"></i>
         </button>
-        <div className={styles.sent_messages_container}>
-          <div className={styles.user_chat_container}>
-            <h3 className={styles.first_color}>ahsan</h3>
-            <h3 className={styles.second_user}>faizan</h3>
-          </div>
-          <div className={styles.input_messages_container}>
-            <input type="text" />
-            <br />
-            <button>➢</button>
-          </div>
-        </div>
+          <>
+            <div className={styles.sent_messages_container}>
+              <div className={styles.user_chat_container}>
+                <h3 className={styles.first_color}>ahsan</h3>
+                <h3 className={styles.second_user}>faizan</h3>
+              </div>
+            </div>
+            <div className={styles.input_messages_container}>
+              <input type="text" />
+              <br />
+              <button>➢</button>
+            </div>
+          </>
       </div>
     </>
   );

@@ -75,7 +75,6 @@
 
 .logout_button {
   position: absolute;
-  margin-left: 16%;
   margin-top: 20px;
   background-color: var(--button-bg);
   color: var(--button-txt);
@@ -140,101 +139,26 @@
   border-radius: 10px;
 }
  
+/* For mobile screens, hide all elements except the user container */
 @media screen and (max-width: 768px) {
-  .users_main_container {
-    width: 70%;
+  .main_container {
+    display: flex;
+    width: 100vw;
   }
-  .logout_button {
-    margin-left: 30%;
   
+  .users_main_container {
+    width: 100%;
   }
-  .input_messages_container > input {
-    
-    margin-top: 200%;
-  }
-  .input_messages_container > button {
-    margin-top: 200%;
- 
+  
+  
+  .logout_button{
+    margin-left: 80%;
   }
 
-  @media screen and (max-width: 760px) {
-    .users_main_container {
-      width: 50%;
-    }
-    .logout_button {
-      margin-left: 33%;
-    
-    }
-    .input_messages_container > input {
-      width: 100%;
-      margin-top: 300%;
-      padding: 20px 40px;
-    }
-    .input_messages_container > button {
-      margin-top: 300%;
-   
-    }
-  
-  
+  .sent_messages_container {
+    display: none; /* Hide main, users, and sent messages containers */
   }
-  @media screen and (max-width: 915px) {
-    .users_main_container {
-      width: 50%;
-    }
-    .logout_button {
-      margin-left: 33%;
-    
-    }
-    .input_messages_container > input {
-      width: 100%;
-      margin-top: 250%;
-      padding: 20px 50px;
-    }
-    .input_messages_container > button {
-      margin-top: 250%;
-   
-    }
-  
-  
-  }
-  @media screen and (max-width: 926px) {
-    .users_main_container {
-      width: 50%;
-    }
-    .logout_button {
-      margin-left: 32%;
-    
-    }
-    .input_messages_container > input {
-      width: 100%;
-      margin-top: 200%;
-      padding: 20px 50px;
-    }
-    .input_messages_container > button {
-      margin-top: 200%;
-   
-    }
-  
-  
-  }
-  @media screen and (max-width: 627px) {
-    .users_main_container {
-      width: 50%;
-    }
-    .logout_button {
-      margin-left: 32%;
-    
-    }
-    .input_messages_container > input {
-      width: 100%;
-      margin-top: 280%;
-      padding: 20px 50px;
-    }
-    .input_messages_container > button {
-      margin-top: 280%;
-   
-    }
-  
-  
+  .input_messages_container {
+    display: none; /* Hide logout button and input messages container */
   }
 }
