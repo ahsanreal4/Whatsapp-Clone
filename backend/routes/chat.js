@@ -14,4 +14,9 @@ router.post(
   asyncJsonController((req) => chat.createChat(req))
 );
 
+router.post(
+  "/create-message",
+  asyncJsonController((req) => chat.createMessage(req))
+);
+
 module.exports = router;

@@ -25,4 +25,20 @@ const createChat = async (req) => {
   }
 };
 
-module.exports = { getChats, createChat };
+const createMessage = async (req) => {
+  try {
+    const { chatId, message, senderId } = req.body;
+
+    if (!chatId) return { success: false, message: "Chat id not provided" };
+    if (!message) return { success: false, message: "Message not provided" };
+    if (!senderId) return { success: false, message: "Sender id not provided" };
+
+    await chatService.createMessage(message, chatId, senderId);
+    return { success: true };
+  } catch (err) {
+    console.error(err.message);
+    return { success: false };
+  }
+};
+
+module.exports = { getChats, createChat, createMessage };
