@@ -20,14 +20,14 @@ function Chat() {
               <p>{chat.participants[0].name}</p>
             </div>
           ))}
-          
-          <button className={styles.logout_button} onClick={logout}>Logout</button>
-
         </div>
+            <button className={styles.logout_button} onClick={logout}><i class="fa-solid fa-right-from-bracket"></i></button>
         <div className={styles.sent_messages_container}>
           <div className={styles.user_chat_container}>
             <h3 className={styles.first_color}>ahsan</h3>
-            <h3 className={styles.second_user}>fazan</h3>
+            <h3 className={styles.second_user}>faizan</h3>
+         
+            
           </div>
           <div className={styles.input_messages_container}>
             <input type="text" />
