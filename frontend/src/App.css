@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 :root {
@@ -18,16 +19,14 @@
   --button-txt: white;
   --button-hvr: #2980b9;
 
-
   /*  users colors */
-  --1st-user-color:white;
-  --2nd-user-color :#DCF8C6;
+  --1st-user-color: white;
+  --2nd-user-color: #dcf8c6;
 
   /* user container color  */
-  --user-container-bg : lightgray;
+  --user-container-bg: lightgray;
 }
 
 button:disabled {
   background-color: gray !important;
 }
-
