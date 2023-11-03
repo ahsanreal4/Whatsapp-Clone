@@ -1,10 +1,17 @@
 const express = require("express");
 const cors = require("cors");
+const http = require("http");
 
 const app = express();
 const noAuth = require("./routes/noAuth");
 const api = require("./routes/api");
+const { init } = require("./config/socketio");
 const PORT = 8000;
+
+const server = new http.Server(app);
+
+// Initialize socket io
+init(server);
 
 // Connect database
 require("./config/db");
@@ -19,6 +26,6 @@ app.use(express.json());
 app.use("/noAuth", noAuth);
 app.use("/api", api);
 
-app.listen(PORT, function () {
+server.listen(PORT, function () {
   console.log(`Listening to port ${PORT}`);
 });
