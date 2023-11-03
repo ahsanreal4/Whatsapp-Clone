@@ -4,7 +4,6 @@ import styles from "../Chat.module.css";
 import { useGlobalContext } from "../../../context/globalContext/globalContext";
 import useSendChatMessageMutation from "../../../hooks/mutators/useSendChatMessageMutation";
 import { toast } from "react-toastify";
-import moment from "moment";
 
 function MessageInputBox({ chatId }) {
 
@@ -42,23 +41,13 @@ function MessageInputBox({ chatId }) {
   };
 
   const Message = ({ message }) => (
-    <div
+    <h3
       className={`${
-<<<<<<< HEAD
         message.sender._id === user._id ? styles.second_user : styles.first_color
       }`}
-=======
-        message.sender._id == user._id ? styles.second_user : styles.first_color
-      } ${styles.user_message_container}`}
->>>>>>> 824d4e93b53e6772dc75686ddfa92c0b7f00f80d
     >
-      <h4>{message.message}</h4>
-      <div>
-        <p className={styles.message_time}>
-          {moment(message.createdAt).format("hh:mm a")}
-        </p>
-      </div>
-    </div>
+      {message.message}
+    </h3>
   );
 
   return (
@@ -72,7 +61,6 @@ function MessageInputBox({ chatId }) {
         <input
           type="text"
           ref={chatInputRef}
-          autoFocus
           onKeyUp={(e) => {
             if (e.key === "Enter") {
               e.preventDefault();
