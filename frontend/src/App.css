@@ -25,6 +25,9 @@
 
   /* user container color  */
   --user-container-bg: lightgray;
+
+  /* chat colors */
+  --message-time-color: gray;
 }
 
 button:disabled {
