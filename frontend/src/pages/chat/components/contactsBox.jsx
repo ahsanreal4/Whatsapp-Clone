@@ -1,8 +1,13 @@
+import { useNavigate } from "react-router-dom";
 import useLogout from "../../../hooks/useLogout";
 import styles from "../Chat.module.css";
 
 function ContactsBox({ activeItem, setActiveItem, chats }) {
   const { logout } = useLogout();
+  const navigate = useNavigate()
+  function handleNavigate(){
+    navigate('/mobilechat')
+  }
 
   const ChatItem = ({ chat, isActive, index }) => (
     <div
@@ -22,8 +27,8 @@ function ContactsBox({ activeItem, setActiveItem, chats }) {
   );
 
   return (
-    <div className={styles.users_main_container}>
-      <div className={styles.users_container}>
+    <div className={styles.users_main_container} >
+      <div className={styles.users_container} onClick={handleNavigate}   >
         <div className={styles.logout_button_container}>
           <h1>Chats</h1>
           <button onClick={logout} className={styles.logout_button}>
@@ -40,7 +45,7 @@ function ContactsBox({ activeItem, setActiveItem, chats }) {
                 key={`chat-item-${index}`}
                 chat={chat}
                 index={index}
-                isActive={activeItem == index}
+                isActive={activeItem === index}
               />
             ))
           )}

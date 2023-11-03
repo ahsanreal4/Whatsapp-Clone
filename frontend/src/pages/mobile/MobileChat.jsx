@@ -1,12 +1,10 @@
 import { useEffect, useRef } from "react";
-import useGetChatMessages from "../../../hooks/queries/useGetChatMessages";
-import styles from "../Chat.module.css";
-import { useGlobalContext } from "../../../context/globalContext/globalContext";
-import useSendChatMessageMutation from "../../../hooks/mutators/useSendChatMessageMutation";
+import useGetChatMessages from "../../hooks/queries/useGetChatMessages";
+import { useGlobalContext } from "../../context/globalContext/globalContext";
+import useSendChatMessageMutation from "../../hooks/mutators/useSendChatMessageMutation";
 import { toast } from "react-toastify";
-
-function MessageInputBox({ chatId }) {
-
+import styles from './mobile.module.css'
+function MobileChat({ chatId }) {
   const { messages, getChatMessages } = useGetChatMessages();
   const { sendMessage } = useSendChatMessageMutation();
   const chatInputRef = useRef(null);
@@ -75,4 +73,4 @@ function MessageInputBox({ chatId }) {
   );
 }
 
-export default MessageInputBox;
+export default MobileChat

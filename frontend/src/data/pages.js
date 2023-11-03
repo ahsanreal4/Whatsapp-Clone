@@ -3,4 +3,5 @@ export const PAGES = {
   SIGN_UP: "/signup",
   CHAT: "/chat",
   WELCOME: "/",
+  MOBILECHAT :"/mobilechat"
 };
