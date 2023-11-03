@@ -49,12 +49,13 @@ function Chat() {
                 <h3 className={styles.first_color}>ahsan</h3>
                 <h3 className={styles.second_user}>faizan</h3>
               </div>
-            </div>
-            <div className={styles.input_messages_container}>
+              <div className={styles.input_messages_container}>
               <input type="text" />
               <br />
               <button>➢</button>
             </div>
+            </div>
+    
           </>
       </div>
     </>
