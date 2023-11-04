@@ -1,13 +1,26 @@
 import { useNavigate } from "react-router-dom";
-import useLogout from "../../../hooks/useLogout";
 import styles from "../Chat.module.css";
+import LogoutPopUp from "./LogoutPopUp";
+import { useState } from "react";
+
+
 
 function ContactsBox({ activeItem, setActiveItem, chats }) {
-  const { logout } = useLogout();
+  const [showLogoutPopup, setShowLogoutPopup] = useState(false);
   const navigate = useNavigate()
-  function handleNavigate(){
-    navigate('/mobilechat')
+  function handleNavigate() {
+    if (window.innerWidth < 650) {
+      navigate('/mobilechat');
+    }
   }
+  const handleLogout = () => {
+    setShowLogoutPopup(true);
+  };
+
+  const handleClose = () => {
+    setShowLogoutPopup(false);
+  };
+
 
   const ChatItem = ({ chat, isActive, index }) => (
     <div
@@ -27,11 +40,12 @@ function ContactsBox({ activeItem, setActiveItem, chats }) {
   );
 
   return (
+    <>
     <div className={styles.users_main_container} >
       <div className={styles.users_container} onClick={handleNavigate}   >
         <div className={styles.logout_button_container}>
           <h1>Chats</h1>
-          <button onClick={logout} className={styles.logout_button}>
+          <button  className={styles.logout_button}  onClick={handleLogout}>
             <i className="fa-solid fa-right-from-bracket"></i>
           </button>
         </div>
@@ -52,7 +66,14 @@ function ContactsBox({ activeItem, setActiveItem, chats }) {
         </div>
       </div>
     </div>
-  );
+
+
+    {showLogoutPopup && (
+        <LogoutPopUp onConfirm={handleLogout} onCancel={handleClose} />
+      )}
+      </>  
+
+)
 }
 
 export default ContactsBox;
