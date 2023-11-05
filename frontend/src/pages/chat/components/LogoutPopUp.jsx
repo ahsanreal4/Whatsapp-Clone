@@ -1,19 +1,19 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import { PAGES } from '../../../data/pages';
 function LogoutPopUp() {
   const navigate = useNavigate();
 
+
+
+
   const divStyle = {
-    height: 'auto',
-    width: '300px',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
     padding: '20px',
-    backgroundColor: '#f5f5f5',
-    border: '1px solid #ccc',
+    backgroundColor: 'white',
     borderRadius: '5px',
     width : '300px',
     height: '300px',
@@ -46,7 +46,7 @@ function LogoutPopUp() {
   };
 
   const handleNavigate = () => {
-    navigate('/');
+    navigate(PAGES.WELCOME)
   };
 
   return (
