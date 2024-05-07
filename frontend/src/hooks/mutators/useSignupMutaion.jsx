@@ -24,7 +24,7 @@ function useSignupMutaion() {
         navigate(PAGES.SIGN_IN);
         toast.success("Signed Up successfully");
       } else {
-        toast.error("enter correct information");
+        toast.error("User already exists");
       }
     } catch (err) {
       toast.error("Some internal error occurred");

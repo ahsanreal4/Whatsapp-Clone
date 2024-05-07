@@ -28,7 +28,7 @@ function useLoginMutation() {
         navigate(PAGES.CHAT);
         toast.success("Signed in successfully");
       } else {
-        toast.error("User does not exist");
+        toast.error("Invalid Credentials");
       }
     } catch (err) {
       toast.error("Some internal error occurred");
